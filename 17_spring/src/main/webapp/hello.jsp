@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello - Spring Application</h1>
+	<h1 class="text-center text-info">Hello - Spring Application</h1>
+	
+	<div class="text-center">
+		<a class="btn btn-info" href="index.jsp">Enlace inicio</a>
+		
+		<a class="btn btn-info" href="servicios.htm">Enlace a servicios</a>
+	</div>
 </body>
 </html>

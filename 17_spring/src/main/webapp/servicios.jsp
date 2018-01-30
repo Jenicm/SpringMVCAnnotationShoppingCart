@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Nuestros servicios</h2>
+	<h2 class="text-center text-info">Nuestros servicios</h2>
+	
+	<div class="text-center">
+		<a class="btn btn-info" href="hello.htm">Enlace a hello</a>
+		
+		<a class="btn btn-info" href="index.jsp">Enlace inicio</a>
+	</div>
 </body>
 </html>
