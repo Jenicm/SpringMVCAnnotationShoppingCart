@@ -15,7 +15,7 @@
 	<h1 class="text-center text-info">Hello - Spring Application</h1>
 	<p>Greetings, it is now <c:out value="${now}"/></p>
 	<div class="text-center">
-		<a class="btn btn-info" href="index.jsp">Enlace inicio</a>
+		<a class="btn btn-info" href="index.htm">Enlace inicio</a>
 		
 		<a class="btn btn-info" href="servicios.htm">Enlace a servicios</a>
 	</div>
