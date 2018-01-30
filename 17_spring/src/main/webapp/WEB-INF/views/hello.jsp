@@ -1,4 +1,6 @@
-<%@ include file="/WEB-INF/views/include.jsp" %>
+<%@ page session="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -8,16 +10,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title><fmt:message key="title"/></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	<h1 class="text-center text-info">Hello - Spring Application</h1>
-	<p>Greetings, it is now <c:out value="${now}"/></p>
-	<div class="text-center">
-		<a class="btn btn-info" href="index.htm">Enlace inicio</a>
-		
-		<a class="btn btn-info" href="servicios.htm">Enlace a servicios</a>
+	<h1><fmt:message key="heading"/></h1>
+    <p><fmt:message key="greeting"/> <c:out value="${model.now}"/></p>
+    <h3>Products</h3>
+    <c:forEach items="${model.productos}" var="prod">
+      <c:out value="${prod.descripcion}"/> <i><c:out value="${prod.precio}"/></i><br><br>
+    </c:forEach>
 	</div>
 </body>
 </html>

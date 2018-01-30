@@ -10,6 +10,35 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       
+       <bean id="productoServicio" class="servicios.ProductoServicioImp">
+         <property name="productos">
+            <list>
+                <ref bean="producto1"/>
+                <ref bean="producto2"/>
+                <ref bean="producto3"/>
+            </list>
+         </property>
+       </bean>
+
+       <bean id="producto1" class="model.Producto">
+         <property name="descripcion" value="Lamp"/>
+         <property name="precio" value="5.75"/>
+       </bean>
+        
+       <bean id="producto2" class="model.Producto">
+         <property name="descripcion" value="Table"/>
+         <property name="precio" value="75.25"/>
+       </bean>
+
+       <bean id="producto3" class="model.Producto">
+         <property name="descripcion" value="Chair"/>
+         <property name="precio" value="22.79"/>
+       </bean>
+
+       <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+         <property name="basename" value="messages"/>
+       </bean>
 
        <!-- Scans the classpath of this application for @Components to deploy as beans -->
        <context:component-scan base-package="basico" />
