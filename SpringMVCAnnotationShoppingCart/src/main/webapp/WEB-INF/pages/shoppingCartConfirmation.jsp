@@ -53,10 +53,11 @@
       <a class="navi-item"
           href="${pageContext.request.contextPath}/shoppingCartCustomer">Edit
           Customer Info</a>
- 
-      <!-- Send/Save -->
-      <input type="submit" value="Send" class="button-send-sc" />
+          
+          <input type="submit" value="Send" class="button-send-sc" />
   </form>
+
+	<a href="${pageContext.request.contextPath}/.pdf">PDF</a>
  
   <div class="container">
  
